@@ -53,7 +53,6 @@ class _conteudopagina3State extends State<conteudopagina3> {
       ]),
       height: 300,
       width: 300,
-      //color: Color.fromARGB(243, 255, 219, 17),
       decoration: BoxDecoration(
         border: Border.all(width: 1),
         borderRadius: BorderRadius.circular(20),

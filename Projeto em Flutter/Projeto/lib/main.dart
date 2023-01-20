@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:desafio04_2/pagina4.dart';
 import 'package:flutter/material.dart';
 
 import 'login.dart';
@@ -31,6 +32,7 @@ class meuapp extends StatelessWidget {
         "pagina1": (context) => pagina1(),
         "pagina2": (context) => pagina2(),
         "pagina3": (context) => pagina3(),
+        "pagina4": (context) => pagina4(),
       },
     );
   }

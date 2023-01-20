@@ -18,7 +18,7 @@ class pagina2 extends StatelessWidget {
       ),
       appBar: AppBar(
         title: Text("IMC Calculator"),
-        backgroundColor: Color.fromARGB(225, 7, 142, 160),
+        backgroundColor: Color(0xFF035AA6),
       ),
       drawer: Drawer(
         child: menu(),
