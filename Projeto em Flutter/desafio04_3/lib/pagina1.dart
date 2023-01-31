@@ -39,7 +39,7 @@ class cabecalho extends StatefulWidget {
 
 class _cabecalhoState extends State<cabecalho> {
   int selectedCategory = 0;
-  List<String> categories = ["Biografias", "Box Office", "Coming soon"];
+  List<String> categories = ["Biografias", "Músicas", "Coming soon"];
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -97,6 +97,60 @@ class _cabecalhoState extends State<cabecalho> {
                   ],
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.only(top: 150),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.popAndPushNamed(context, "phil");
+                      },
+                      child: Container(
+                        height: 130,
+                        width: 300,
+                        margin: EdgeInsets.symmetric(
+                            horizontal: kDefaultPadding,
+                            vertical: kDefaultPadding / 2),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(25),
+                          image: DecorationImage(
+                            image: AssetImage("assets/images/phil.png"),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 290),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.popAndPushNamed(context, "jim");
+                      },
+                      child: Container(
+                        height: 130,
+                        width: 300,
+                        margin: EdgeInsets.symmetric(
+                            horizontal: kDefaultPadding,
+                            vertical: kDefaultPadding / 2),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(25),
+                          image: DecorationImage(
+                            image: AssetImage("assets/images/jim3.png"),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
@@ -111,6 +165,11 @@ class _cabecalhoState extends State<cabecalho> {
         onTap: (() {
           setState(() {
             selectedCategory = index;
+            if (selectedCategory == 1) {
+              Navigator.popAndPushNamed(context, "musicas");
+            } else if (selectedCategory == 2) {
+              Navigator.popAndPushNamed(context, "/");
+            }
           });
         }),
         child: Column(
